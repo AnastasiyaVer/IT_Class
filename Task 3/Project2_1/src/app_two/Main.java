@@ -88,6 +88,27 @@ public class Main {
                 System.out.print(arr[i]+" ");
             }
 
+            count=0;
+            for(int i=0;i<n;i++){
+                if((arr[i]>=0) && (arr[i]<=10)){
+                    count++;
+                }
+            }
+
+            int arrNew[]=new int[count];
+
+            for(int i=0, j=0;i<n;i++){
+                if(arr[i]>=0 && arr[i]<=10){
+                    arrNew[j]=arr[i];
+                    j++;
+                }
+            }
+
+            System.out.println("\nНовый массив:");
+            for(int i=0;i<count;i++){
+                System.out.print(arrNew[i]+" ");
+            }
+
         }catch (FileNotFoundException e) {
             e.printStackTrace();
         }
